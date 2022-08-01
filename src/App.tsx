@@ -3,6 +3,8 @@ import HelloWorld from "./components/HelloWorld.vue"
 import "./app.scss"
 
 import style from "./app.module.scss"
+import vueSvg from "@assets/vue.svg"
+
 export default defineComponent({
   setup() {
     return () => (
@@ -12,11 +14,7 @@ export default defineComponent({
             <img src="/vite.svg" className="logo" alt="Vite logo" />
           </a>
           <a href="https://vuejs.org/" target="_blank">
-            <img
-              src="./src/assets/vue.svg"
-              className="logo vue"
-              alt="Vue logo"
-            />
+            <img src={vueSvg} className="logo vue" alt="Vue logo" />
           </a>
         </div>
         <HelloWorld msg="🐮"></HelloWorld>
