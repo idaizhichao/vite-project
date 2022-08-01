@@ -8,10 +8,10 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
-    "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
     "postinstall": "husky install"
   },
   "dependencies": {
+    "vite-svg-loader": "^3.4.0",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -25,7 +25,6 @@
     "autoprefixer": "^10.4.7",
     "commitlint": "^17.0.3",
     "eslint": ">=5.16.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.2",
@@ -45,10 +44,6 @@
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts,json}": [
       "npm run lint:script",
-      "git add --force"
-    ],
-    "**/*.{css,scss}": [
-      "npm run lint:style",
       "git add --force"
     ]
   }
